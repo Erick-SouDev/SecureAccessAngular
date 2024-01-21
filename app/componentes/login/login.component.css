@@ -1,0 +1,34 @@
+.content{
+ 
+    background-color: #222;
+    height: 55rem;
+    overflow: hidden;
+    padding: 0%;
+    margin: 0%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.content-form{
+  width: 500px;  
+  padding: 1% 2% 3%;  
+  box-shadow: 0 0 8px rgba(0, 0, 0, 0.3);
+}
+.content-form #formLogin button{
+    width: 100%;
+    background-color: #222;
+
+}
+.content-form #formLogin{
+    color: white;
+}
+
+.topo{
+    color: white;
+    text-align: center;
+}
+
+.topo #logo-login{
+    width: 150px;
+    border-radius: 100px 100px;
+}
