@@ -23,12 +23,12 @@
     color: white;
 }
 
-.topo{
-    color: white;
-    text-align: center;
-}
+
 
 .topo #logo-login{
     width: 150px;
     border-radius: 100px 100px;
+    margin-top: -30%;
+    margin-left: 30%;
+    z-index: -2; /* Coloque a imagem atrás do formulário */
 }
