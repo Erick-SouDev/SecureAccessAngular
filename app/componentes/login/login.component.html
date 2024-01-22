@@ -6,19 +6,25 @@
         <h4 style="color: white;"> Realize Seu Login</h4>
          
         <br>
-        <form id="formLogin">
+        <form id="formLogin" [formGroup]="formLogin">
             <div class="form-group">
               <label for="email">Endereço de email</label>
-              <input type="email" name="email" class="form-control" id="email" aria-describedby="emailHelp" placeholder="Seu email">
+              <input type="email" formControlName="email" class="form-control" id="email" aria-describedby="emailHelp" placeholder="Seu email">
+              <div *ngIf="formLogin.get('email')?.errors?.['required']">
+                 email obrigatorio
+              </div>
             </div>
             <br>
             <div class="form-group">
               <label for="senha">Senha</label>
-              <input type="password" name="senha" class="form-control" id="senha" placeholder="Sua Senha">
+              <input type="password" name="senha" formControlName="senha" class="form-control" id="senha" placeholder="Sua Senha">
+              <div *ngIf="formLogin.get('senha')?.errors">
+                senha obrigatorio
+             </div>
             </div>
             
              <br>
-            <button type="button"  class="btn btn-primary" id="btn-logar">Acessar</button>
+            <button [disabled]="formLogin.invalid" type="button"  class="btn btn-primary" id="btn-logar">Acessar</button>
           </form>
 
     </div>
