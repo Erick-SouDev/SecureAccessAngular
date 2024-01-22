@@ -10,15 +10,15 @@
             <div class="form-group">
               <label for="email">Endereço de email</label>
               <input type="email" formControlName="email" class="form-control" id="email" aria-describedby="emailHelp" placeholder="Seu email">
-              <div *ngIf="formLogin.get('email')?.errors?.['required']">
-                 email obrigatorio
+              <div *ngIf="formLogin.get('email')?.errors?.['required'] && formLogin.get('email')?.touched">
+                 email obrigatorio ou email invalido
               </div>
             </div>
             <br>
             <div class="form-group">
               <label for="senha">Senha</label>
               <input type="password" name="senha" formControlName="senha" class="form-control" id="senha" placeholder="Sua Senha">
-              <div *ngIf="formLogin.get('senha')?.errors">
+              <div *ngIf="formLogin.get('senha')?.errors?.['required'] && formLogin.get('senha')?.touched">
                 senha obrigatorio
              </div>
             </div>
