@@ -1,31 +1,41 @@
 <div class="content">
-    <div class="content-form">
-      <header class="topo">
-        <img src="../assets/img/logo-login.png" alt="" id="logo-login">
-      </header>
-        <h4 style="color: white;"> Realize Seu Login</h4>
-         
-        <br>
-        <form id="formLogin" [formGroup]="formLogin">
-            <div class="form-group">
-              <label for="email">Endereço de email</label>
-              <input type="email" formControlName="email" class="form-control" id="email" aria-describedby="emailHelp" placeholder="Seu email">
-              <div *ngIf="formLogin.get('email')?.errors?.['required'] && formLogin.get('email')?.touched">
-                 email obrigatorio ou email invalido
-              </div>
-            </div>
-            <br>
-            <div class="form-group">
-              <label for="senha">Senha</label>
-              <input type="password" name="senha" formControlName="senha" class="form-control" id="senha" placeholder="Sua Senha">
-              <div *ngIf="formLogin.get('senha')?.errors?.['required'] && formLogin.get('senha')?.touched">
-                senha obrigatorio
-             </div>
-            </div>
-            
-             <br>
-            <button [disabled]="formLogin.invalid" type="button"  class="btn btn-primary" id="btn-logar">Acessar</button>
-          </form>
+  <div class="content-form">
+    <header class="topo">
+      <img src="../assets/img/logo-login.png" alt="" id="logo-login">
+    </header>
+    <h4 style="color: white;"> Realize Seu Login</h4>
 
-    </div>
+    <br>
+    <form id="formLogin" [formGroup]="formLogin">
+      <div class="form-group">
+        <label for="email">Endereço de email</label>
+        <input type="email" formControlName="email" class="form-control" id="email" aria-describedby="emailHelp"
+          placeholder="Seu email">
+        <div style="color: red;"
+          *ngIf="formLogin.get('email')?.errors?.['required'] && formLogin.get('email')?.touched">
+          E-mail Obrigatorio ou E-mail Invalido
+        </div>
+      </div>
+      <br>
+      <div class="form-group">
+        <label for="senha">Senha</label>
+        <input type="password" name="senha" formControlName="senha" class="form-control" id="senha"
+          placeholder="Sua Senha">
+        <div style="color: red;"
+          *ngIf="formLogin.get('senha')?.errors?.['required'] && formLogin.get('senha')?.touched">
+          Senha Obrigatorio
+        </div>
+      </div>
+      <br>
+      <button (click)="logar()" [disabled]="formLogin.invalid" type="button" class="btn btn-primary"
+        id="btn-logar">Acessar</button>
+    </form>
+    <footer class="roda-pe">
+      <span>
+        <a href="#" style="color: blue; text-decoration: none;">
+          Cadastre-se
+        </a>
+      </span>
+    </footer>
+  </div>
 </div>

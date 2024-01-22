@@ -1,6 +1,5 @@
 .content{
  
-    background-color: #222;
     height: 55rem;
     overflow: hidden;
     padding: 0%;
@@ -14,9 +13,9 @@
   padding: 1% 2% 3%;  
   box-shadow: 0 0 8px rgba(0, 0, 0, 0.3);
 }
-.content-form #formLogin button{
+.content-form #formLogin #btn-logar{
     width: 100%;
-    background-color: #222;
+   
 
 }
 .content-form #formLogin{
